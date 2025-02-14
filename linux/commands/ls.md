@@ -49,3 +49,75 @@ Each line in the output represents a file or directory and consists of the follo
 | **Size**              | `4096`         | File size in bytes                             |
 | **Modification Date**  | `Feb 12 10:30` | Last modification date and time                |
 | **File Name**         | `app`          | Name of the file or directory                 |
+
+
+##### 📌 4. Show Hidden Files & Directories (`-a` option)
+```sh
+ls -a
+```
+
+📂 **Example Output:**
+```sh
+.  ..  .git  .env  app  logs  scripts  config.yaml
+```
+
+##### 📖 Explanation:
+- `.` (dot) represents the current directory.
+- `..` (double dot) represents the parent directory.
+- Files and directories that start with a `.` (like `.git` and `.env`) are normally hidden but will be display with `ls -a`.
+
+##### 📌 5. Human-Readable File Sizes (`-lh` option)
+```sh
+ls -lh
+```
+📂 **Example Output:**
+Display file sizes in a readable format(KB, MB, GB).
+
+```sh
+-rw-r--r-- 1 user user  1.2K Feb 12 10:30 config.yaml
+```
+In this output, `1.2K` is easier to understand then 1200 bytes.
+
+##### 📌 6. Human-Readable File Sizes (`-lt` option)
+```sh
+ls -lt
+```
+📂 **Example Output:**
+Lists files sorted by the most recently modified.
+```sh
+-rw-r--r-- 1 user user  120 Feb 12 11:00 latest.log
+drwxr-xr-x 2 user user  4096 Feb 12 10:30 scripts
+```
+In this case, `latest.log` was modified most recently.
+
+##### 📌 7. Sorting Files by Size Using the `-lS` Option
+```sh
+ls -lS
+```
+📂 **Example Output:**
+
+To list files in a directory sorted by size(Largest first), use the `ls` command  with the `-lS` option.
+
+```sh
+-rw-r--r-- 1 user user  15M Feb 12 10:30 backup.tar.gz
+-rw-r--r-- 1 user user  5K  Feb 12 10:30 report.txt
+```
+In this example, `backup.tar.gz` is the largest file, appearing at the top of the list.
+
+##### 📌 8. Recursive Listing (-R option)
+```sh
+ls -R
+```
+📂 **Example Output:**
+The `ls -R` command lists files and directories recursively, displaying the structure of all subdirectories.
+```sh
+.:
+app  logs  scripts
+
+./app:
+main.py  utils.py
+
+./logs:
+error.log  access.log
+```
+This command helps visualize the hierarchical structure of directories and their contents.
