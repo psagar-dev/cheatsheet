@@ -26,3 +26,5 @@ This configuration enables Jenkins to send e-mails using Gmail SMTP.
 - If you're using Gmail, you must either:
   - Generate and use an **App Password** (if 2FA is enabled).
 - It’s recommended to test the configuration after setting up to ensure delivery works.
+
+![User Service Build](./images/Extended-E-mail-Notification.png)
