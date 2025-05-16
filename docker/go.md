@@ -1,3 +1,5 @@
+### Go
+```
 # 1. Build stage
 FROM golang:1.22-alpine AS builder
 
@@ -30,3 +32,4 @@ COPY --from=builder /app/server .
 EXPOSE 8080
 
 CMD ["./server"]
+```
